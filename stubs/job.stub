@@ -1,0 +1,31 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Bus\Dispatchable;
+
+/**
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch()
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean)
+ * @method static mixed dispatchSync()
+ * @method static mixed dispatchNow()
+ * @method static mixed dispatchAfterResponse()
+ * @method static \Illuminate\Foundation\Bus\PendingChain withChain(array $chain)
+ */
+final class {{ class }}
+{
+    use Dispatchable;
+
+    public function __construct(
+        //
+    ) {
+    }
+
+    public function handle(): void
+    {
+        //
+    }
+}
