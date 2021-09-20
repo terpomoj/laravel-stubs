@@ -13,7 +13,7 @@ final class {{ class }} implements Rule
     ) {
     }
 
-    public function passes(string $attribute, $value): bool
+    public function passes($attribute, $value): bool
     {
         //
     }
