@@ -4,22 +4,18 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\InvokableRule;
 
-final class {{ class }} implements Rule
+final class {{ class }} implements InvokableRule
 {
-    public function __construct(
-        //
-    ) {
-    }
-
-    public function passes($attribute, $value): bool
+    /**
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @param  \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString  $fail
+     */
+    public function __invoke($attribute, $value, $fail): void
     {
         //
-    }
-
-    public function message(): string
-    {
-        return 'The validation error message.';
     }
 }
+

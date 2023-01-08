@@ -2,19 +2,10 @@
 
 declare(strict_types=1);
 
-namespace {{ namespace }};
+use function Pest\Laravel\get;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Tests\TestCase;
 
-final class {{ class }} extends TestCase
-{
-    /** @test */
-    public function it_example(): void
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-}
+test('example', function () {
+    get('/')
+        ->assertStatus(200);
+});

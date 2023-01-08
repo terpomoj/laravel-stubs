@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Database\Seeders;
+namespace {{ namespace }};
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 final class {{ class }} extends Seeder

@@ -9,7 +9,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 final class {{ class }} extends JsonResource
 {
-    public function toArray(Request $request): array
+    /**
+     * @param  \Illuminate\Http\Request  $request
+     */
+    public function toArray($request): array
     {
         return parent::toArray($request);
     }

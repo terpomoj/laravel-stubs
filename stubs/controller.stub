@@ -5,43 +5,30 @@ declare(strict_types=1);
 namespace {{ namespace }};
 
 use {{ rootNamespace }}Http\Controllers\Controller;
+use {{ namespacedModel }};
+use {{ namespacedParentModel }};
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 final class {{ class }} extends Controller
 {
-    public function index(): Response
+    public function store(Request $request, {{ parentModel }} ${{ parentModelVariable }}): Response
+    {
+        abort(404);
+    }
+
+    public function show({{ parentModel }} ${{ parentModelVariable }}): Response
     {
         //
     }
 
-    public function create(): Response
+    public function update(Request $request, {{ parentModel }} ${{ parentModelVariable }}): Response
     {
         //
     }
 
-    public function store(Request $request): Response
+    public function destroy({{ parentModel }} ${{ parentModelVariable }}): Response
     {
-        //
-    }
-
-    public function show(int $id): Response
-    {
-        //
-    }
-
-    public function edit(int $id): Response
-    {
-        //
-    }
-
-    public function update(Request $request, int $id): Response
-    {
-        //
-    }
-
-    public function destroy(int $id): Response
-    {
-        //
+        abort(404);
     }
 }
